@@ -1,33 +1,86 @@
-.App {
-  text-align: center;
+body{
+  height: 100vh;
+  width: 100%
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+header{
+  height: 100px;
+  width: 100%;
+  background: rgb(11, 155, 165);
+  color: white
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  height: 250px;
+  width: 100%;
+  padding-top: 50px;
+}
+
+.firstInputRow{
+  width: 70%;
+  display: flex;
+  justify-content: space-between
+
+}
+
+.firstInputRow input{
+  width: 150px;
+  height: 25px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 2px rgb(4, 230, 247);
+  outline: none
+}
+
+.firstInputRow input::placeholder{
+  font-size: 15px
+}
+
+
+.secondInputRow{
+  width: 70%;
+  display: flex;
+  justify-content: space-between
+}
+
+.secondInputRow input{
+  width: 150px;
+  height: 25px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid 2px rgb(4, 230, 247);
+  outline: none
+}
+
+.secondInputRow input::placeholder{
+  font-size: 15px
+}
+
+
+
+.inputContainer button{
+  height: 70px;
+  width: 70px;
+  border: none;
+  outline: none;
+     
+ 
+}
+
+.listOfShoesED{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 80px;
+
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
