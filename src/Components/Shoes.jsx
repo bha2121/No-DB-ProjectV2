@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 import FormShoes from './FormShoes'
+import GainLoss from './GainLoss'
 
 
 class Shoes extends Component{
@@ -92,6 +93,16 @@ class Shoes extends Component{
                             />
                     </div>
                     <button onClick={this.handleClick}><i className="fas fa-plus fa-2x"></i> <i className="fas fa-shoe-prints fa-2x"></i></button>
+                </div>
+                <GainLoss sneakers={this.props.sneakers}/>
+                <div className="category">
+                    <div className="items">
+                        <p>Item</p>
+                        <div className="itemsRight">
+                            <p>Resale</p>
+                            <p> Edit/Delete</p>
+                        </div>
+                    </div>
                 </div>
                 {this.props.sneakers.map((item)=> {
                     return <FormShoes

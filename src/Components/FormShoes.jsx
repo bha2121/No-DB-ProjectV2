@@ -64,7 +64,7 @@ handleChange = e => {
           </div>
           <div className="rightShoeInfo">
               <div className="shoePrices">
-                <p><i class="fas fa-dollar-sign"></i> {this.props.item.resalePrice}</p>
+                <p><i className="fas fa-dollar-sign"></i> {this.props.item.resalePrice}</p>
               </div>
               <div className="shoeButtons">
                 <button onClick={this.handleEditClick}><i className="fas fa-edit fa-2x"></i></button>

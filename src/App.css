@@ -4,20 +4,44 @@ body{
 }
 
 header{
-  height: 150px;
+  height: 125px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  background: rgb(11, 155, 165);
-  color: white
+  /* background: rgb(11, 155, 165); */
+  background: rgb(5, 205, 219); 
+  border-bottom: solid 2px rgba(236, 234, 234, 0.411);
+  padding-left: 30px
 }
+
+header h1{
+  color: white;
+  font-size: 55px;
+  font-style: italic;
+  font-weight: 900;
+}
+
+header img{
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.hamburger{
+  width: 90px;
+}
+
 
 .inputContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 250px;
+  height: 225px;
   width: 100%;
   padding-top: 50px;
+  border-bottom: solid 4px rgba(236, 234, 234, 0.411);
 }
 
 .firstInputRow{
@@ -75,10 +99,11 @@ header{
 }
 
 .inputContainer button:hover{
-  color: rgb(4, 230, 24);
-  /* color: rgb(4, 230, 247); */
+  /* color: rgb(4, 230, 24); */
+  color: rgb(4, 230, 247);
+
   cursor: pointer;
-  transition-delay: .07s;
+  transition-delay: .05s;
   transition-duration: 0.3s;
   
 }
@@ -97,7 +122,7 @@ header{
 .leftShoeInfo{
   display: block;
   width: 250px;
-  font-family: "Lucida Console", Monaco, monospace
+  /* font-family: "Lucida Console", Monaco, monospace */
 }
 
 .leftShoeInfo :nth-child(1){
@@ -160,9 +185,151 @@ input {
 }
 
 input:focus{
-  border-bottom-color: peachpuff;
+  /* border-bottom-color: peachpuff; */
+  border-bottom-color: black;
+  
   transition-delay: .07s;
-  transition-duration: 0.4s;
+  transition-duration: .7s;
   
   
 }
+
+.category{
+  height: 50px;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 900;
+  border-bottom: solid 4px rgba(236, 234, 234, 0.411);
+  color: rgb(4, 230, 247);
+  border-top: solid 4px rgba(236, 234, 234, 0.411);
+
+}
+
+.items{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.items :nth-child(1){
+  width: 260px
+}
+
+.itemsRight{
+  display: flex;
+  flex-direction: row;
+  width: 210px;
+  justify-content: space-between;
+}
+
+
+.gainLossPositive{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.gainLossPositive :nth-child(1){
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+.gainP{
+  color: green;
+}
+
+.profitP{
+  color: green;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.profitP i{
+  font-size: 25px
+}
+
+.profitP p{
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.gainLossNegative{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gainLossNegative :nth-child(1){
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center
+}
+
+.gainN{
+  color: red;
+}
+
+.profitN{
+  color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.profitN i{
+  font-size: 25px;
+  color: red; 
+}
+
+.profitN p{
+  font-size: 30px;
+  font-weight: 900;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

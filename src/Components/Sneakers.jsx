@@ -68,7 +68,15 @@ class Sneakers extends Component{
 
         return(
             <div>
-                <header>HEADER</header>
+                <header>
+                        <img src="https://shoppinglinks.com/themes/front/images/home_new/sl_logo_onlysl.png" alt=""/>
+                        <h1>Sneaker List</h1>
+
+                        <div className="hamburger">
+                            <i className="fas fa-bars fa-2x"></i>
+                        </div>
+                    
+                </header>
                 <div>
                     <Shoes
                         sneakers={sneakers}
