@@ -57,14 +57,20 @@ handleChange = e => {
       </div>
     ) : (
         <div className="listOfShoesED">
-            <p>{`${this.props.item.brand}
-            ${this.props.item.model}
-            ${this.props.item.colorway}
-             sz. ${this.props.item.size}
-            $${this.props.item.retailPrice}
-            $${this.props.item.resalePrice}`}</p>
-            <button onClick={this.handleEditClick}>edit</button>
-            <button onClick={this.handleDeleteClick}>delete shoe</button>
+          <div className="leftShoeInfo">
+            <p>{`${this.props.item.brand} ${this.props.item.model} ${this.props.item.colorway}`}</p>
+            <p>{`Size: ${this.props.item.size}`}</p>
+            <p>{`Retail: $${this.props.item.retailPrice}`}</p>
+          </div>
+          <div className="rightShoeInfo">
+              <div className="shoePrices">
+                <p><i class="fas fa-dollar-sign"></i> {this.props.item.resalePrice}</p>
+              </div>
+              <div className="shoeButtons">
+                <button onClick={this.handleEditClick}><i className="fas fa-edit fa-2x"></i></button>
+                <button onClick={this.handleDeleteClick}><i className="far fa-trash-alt fa-2x"></i></button>
+              </div>
+          </div>
             
     </div>
     )

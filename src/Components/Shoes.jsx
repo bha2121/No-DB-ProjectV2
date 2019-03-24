@@ -46,31 +46,52 @@ class Shoes extends Component{
                         
                         <input onChange={this.handleChange}
                                 name="brand" 
-                                placeholder="brand" 
+                                placeholder="Brand" 
                                 type="text"
                                 autoComplete="off"
-                                value= {this.state.brand} 
+                           
                                 />
                         <input onChange={this.handleChange}
                                 name="model"
-                                placeholder="model" 
+                                placeholder="Model" 
                                 type="text"
                                 autoComplete="off"
                                 />
 
                         <input onChange={this.handleChange}
                                 name="colorway"
-                                placeholder="colorway" 
+                                placeholder="Colorway" 
                                 type="text" 
                                 autoComplete="off"
                                 />
                     </div>
+                    
                     <div className="secondInputRow">
-                        <input placeholder="size" type="number" name="size" onChange={this.handleChange} />
-                        <input placeholder="$ Retail" type="number" name="retailPrice" onChange={this.handleChange} />
-                        <input placeholder="$ Resale " type="number" name="resalePrice" onChange={this.handleChange} />
+
+                        <input onChange={this.handleChange}
+                            name="size" 
+                            placeholder="Size" 
+                            type="number" 
+                            min="1"
+                            step=".5"
+
+                            />
+                        <input onChange={this.handleChange} 
+                            name="retailPrice" 
+                            placeholder="$ Retail" 
+                            type="number" 
+                            min="0"
+                            step="10"
+                            />
+                        <input onChange={this.handleChange} 
+                            name="resalePrice" 
+                            placeholder="$ Resale " 
+                            type="number" 
+                            min="0"
+                            step="10"
+                            />
                     </div>
-                    <button onClick={this.handleClick}> <i className="fas fa-shoe-prints fa-3x"></i></button>
+                    <button onClick={this.handleClick}><i className="fas fa-plus fa-2x"></i> <i className="fas fa-shoe-prints fa-2x"></i></button>
                 </div>
                 {this.props.sneakers.map((item)=> {
                     return <FormShoes

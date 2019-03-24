@@ -4,7 +4,7 @@ body{
 }
 
 header{
-  height: 100px;
+  height: 150px;
   width: 100%;
   background: rgb(11, 155, 165);
   color: white
@@ -21,7 +21,7 @@ header{
 }
 
 .firstInputRow{
-  width: 70%;
+  width: 50%;
   display: flex;
   justify-content: space-between
 
@@ -43,7 +43,7 @@ header{
 
 
 .secondInputRow{
-  width: 70%;
+  width: 50%;
   display: flex;
   justify-content: space-between
 }
@@ -65,12 +65,22 @@ header{
 
 
 .inputContainer button{
-  height: 70px;
+  height: 60px;
   width: 70px;
   border: none;
   outline: none;
-     
- 
+  display: flex;
+  flex-direction: row;
+  color: rgb(77, 75, 75);
+}
+
+.inputContainer button:hover{
+  color: rgb(4, 230, 24);
+  /* color: rgb(4, 230, 247); */
+  cursor: pointer;
+  transition-delay: .07s;
+  transition-duration: 0.3s;
+  
 }
 
 .listOfShoesED{
@@ -78,9 +88,81 @@ header{
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 80px;
+  height: 120px;
+  border-top: solid 1px rgba(236, 234, 234, 0.411);
+  border-bottom: solid 1px rgba(236, 234, 234, 0.411);
+  justify-content: space-around;
+}
 
+.leftShoeInfo{
+  display: block;
+  width: 250px;
+  font-family: "Lucida Console", Monaco, monospace
+}
+
+.leftShoeInfo :nth-child(1){
+  font-weight: 900;
+  
 }
 
 
+.rightShoeInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 220px;
+  justify-content: space-between;
+}
 
+.rightShoeInfo .shoePrices{
+  width: 95px;
+  font-size: 25px;
+  font-weight: 900;
+}
+
+.shoeButtons{
+  display: flex;
+  flex-direction: row;
+  width: 75px;
+  justify-content: space-between
+}
+
+.shoeButtons button{
+  border: none
+}
+
+.shoeButtons :nth-child(1){
+  outline-color: rgb(4, 230, 247);
+  cursor: pointer;
+}
+
+.shoeButtons :nth-child(2){
+  outline-color: tomato;
+  cursor: pointer;
+}
+
+.fa-trash-alt{
+  color: tomato
+}
+
+.fa-edit{
+  /* color: rgb(23, 147, 230) */
+  color: rgb(4, 230, 247)
+}
+
+.fa-dollar-sign{
+  color: green;
+}
+
+
+input {
+  font-size: inherit;
+}
+
+input:focus{
+  border-bottom-color: peachpuff;
+  transition-delay: .07s;
+  transition-duration: 0.4s;
+  
+  
+}
