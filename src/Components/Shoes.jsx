@@ -50,7 +50,6 @@ class Shoes extends Component{
                                 placeholder="Brand" 
                                 type="text"
                                 autoComplete="off"
-                           
                                 />
                         <input onChange={this.handleChange}
                                 name="model"
@@ -58,7 +57,6 @@ class Shoes extends Component{
                                 type="text"
                                 autoComplete="off"
                                 />
-
                         <input onChange={this.handleChange}
                                 name="colorway"
                                 placeholder="Colorway" 
@@ -70,37 +68,36 @@ class Shoes extends Component{
                     <div className="secondInputRow">
 
                         <input onChange={this.handleChange}
-                            name="size" 
-                            placeholder="Size" 
-                            type="number" 
-                            min="1"
-                            step=".5"
-
-                            />
+                                name="size" 
+                                placeholder="Size" 
+                                type="number" 
+                                min="1"
+                                step=".5"
+                                />
                         <input onChange={this.handleChange} 
-                            name="retailPrice" 
-                            placeholder="$ Retail" 
-                            type="number" 
-                            min="0"
-                            step="10"
-                            />
+                                name="retailPrice" 
+                                placeholder="$ Retail" 
+                                type="number" 
+                                min="0"
+                                step="10"
+                                />
                         <input onChange={this.handleChange} 
-                            name="resalePrice" 
-                            placeholder="$ Resale " 
-                            type="number" 
-                            min="0"
-                            step="10"
-                            />
+                                name="resalePrice" 
+                                placeholder="$ Resale " 
+                                type="number" 
+                                min="0"
+                                step="10"
+                                />
                     </div>
                     <button onClick={this.handleClick}><i className="fas fa-plus fa-2x"></i> <i className="fas fa-shoe-prints fa-2x"></i></button>
                 </div>
                 <GainLoss sneakers={this.props.sneakers}/>
                 <div className="category">
                     <div className="items">
-                        <p>Item</p>
+                        <p>Item ▼</p>
                         <div className="itemsRight">
                             <p>Resale</p>
-                            <p> Edit/Delete</p>
+                            <p>Edit/<span>Delete</span></p>
                         </div>
                     </div>
                 </div>

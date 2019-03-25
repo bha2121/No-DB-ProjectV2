@@ -47,13 +47,24 @@ handleChange = e => {
   render() {
     return this.state.edit ? (
       <div className="listOfShoesU">
-        <input type="text" name="brand" value={this.state.brand} onChange={this.handleChange}/>
-        <input type="text" name="model" value={this.state.model} onChange={this.handleChange}/>
-        <input type="text" name="colorway" value={this.state.colorway} onChange={this.handleChange}/>
-        <input type="number" name="size" value={this.state.size} onChange={this.handleChange}/>
-        <input type="number" name="retailPrice" value={this.state.retailPrice} onChange={this.handleChange}/>
-        <input type="number" name="resalePrice" value={this.state.resalePrice} onChange={this.handleChange}/>
-        <button onClick={this.handleUpdateClick}>update shoe</button>
+        <div className="leftUpdate">
+
+          <div className="leftUpdateTop">
+            
+            <input type="text" name="brand" value={this.state.brand} autoComplete="off" onChange={this.handleChange}/>
+            <input type="text" name="model" value={this.state.model} autoComplete="off" onChange={this.handleChange}/>
+            <input type="text" name="colorway" value={this.state.colorway} autoComplete="off" onChange={this.handleChange}/>
+          </div>
+
+            <input className="sizeUpdate" type="number" name="size" value={this.state.size} min="1" step=".5" onChange={this.handleChange}/>
+            <input className="retailUpdate" type="number" name="retailPrice" value={this.state.retailPrice} min="0" step="10" onChange={this.handleChange}/>
+        </div>
+
+        <div className="rightUpdate">
+          <input type="number" name="resalePrice" value={this.state.resalePrice} min="0" step="10" onChange={this.handleChange}/>
+          <button onClick={this.handleUpdateClick}><i className="far fa-check-circle fa-3x"></i></button>
+        </div>
+
       </div>
     ) : (
         <div className="listOfShoesED">
