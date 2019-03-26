@@ -14,9 +14,11 @@ function GainLoss(props){
        }
        return gain
     })
+
     
     console.log(gain)
     let gL = gain.reduce((total, num)=> total+num,0)
+    console.log(props.sneakers)
     
     return gL >= 0 ?(
     <div className="gainLossPositive">
@@ -30,6 +32,7 @@ function GainLoss(props){
             <p>+</p>
             <i className="fas fa-dollar-sign"></i>
             <p>{gL}</p>
+            
         </div>
 
     </div>
@@ -45,6 +48,7 @@ function GainLoss(props){
             
             <i className="fas fa-dollar-sign"></i>
             <p>{gL}</p>
+           
         </div>
 
     </div>

@@ -24,8 +24,7 @@ module.exports = {
 
     editSneakers: (req, res) => {
         console.log(req.params)
-        let foundSneaker = sneakies.find(sneaker => sneaker.id === req.body.id);
-    //update foundSneaker object with new properties. 
+        let foundSneaker = sneakies.find(sneaker => sneaker.id === req.body.id); 
         console.log(foundSneaker)
         
 	    for (let key in req.body){
@@ -37,15 +36,12 @@ module.exports = {
     },
 
     deleteSneakers: (req, res) => {
-    let { id } = req.params
+        let { id } = req.params
 
-    let index = sneakies.findIndex(sneaker => Number(sneaker.id) === Number(id))
-    sneakies.splice(index, 1)
-    res.send(sneakies)
-
-
-
-    },
+        let index = sneakies.findIndex(sneaker => Number(sneaker.id) === Number(id))
+        sneakies.splice(index, 1)
+        res.send(sneakies)
+    }
 
 
 }

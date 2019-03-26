@@ -1,15 +1,17 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 
-import Shoes from './Shoes'
 
+import Shoe from './Shoe'
 
+const shoePic = require('../pics/sneakernike-512.png')
 
-class Sneakers extends Component{
+class SneakersWrapper extends Component{
     constructor(){
         super()
         
         this.state = {
+
            sneakers: []
         }
     }
@@ -22,7 +24,7 @@ class Sneakers extends Component{
                 sneakers: res.data
             })
         })
-        .catch(err => console.log('We have a problem', err))
+        .catch(err => console.log('Component DID NOT mount', err))
     }
     
     
@@ -69,7 +71,7 @@ class Sneakers extends Component{
         return(
             <div>
                 <header>
-                        <img src="https://shoppinglinks.com/themes/front/images/home_new/sl_logo_onlysl.png" alt=""/>
+                        <img src={shoePic} alt=""/>
                         <h1>Sneaker List</h1>
 
                         <div className="hamburger">
@@ -77,14 +79,15 @@ class Sneakers extends Component{
                         </div>
                     
                 </header>
-                <div>
-                    <Shoes
+                <main>
+                    <Shoe
                         sneakers={sneakers}
                         createSneaker = {this.createSneaker}
                         updateSneaker = {this.updateSneaker}
                         deleteSneaker = {this.deleteSneaker}
                         />
-                </div>
+                </main>
+                
             </div>
 
 
@@ -94,4 +97,4 @@ class Sneakers extends Component{
 }
 
 
-export default Sneakers
+export default SneakersWrapper

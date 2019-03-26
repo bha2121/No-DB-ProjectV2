@@ -1,22 +1,22 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
-class FormShoes extends Component{
-    constructor(props){
-        super(props)
-        this.state = {
-            id: props.item.id,
-            brand: props.item.brand,
-            model: props.item.model,
-            colorway: props.item.colorway,
-            size: props.item.size,
-            retailPrice: props.item.retailPrice,
-            resalePrice: props.item.resalePrice,
-            edit: false
+class FormShoes extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      id: props.item.id,
+      brand: props.item.brand,
+      model: props.item.model,
+      colorway: props.item.colorway,
+      size: props.item.size,
+      retailPrice: props.item.retailPrice,
+      resalePrice: props.item.resalePrice,
+      edit: false
 
     }
-}
+  }
 
-handleChange = e => {
+  handleChange = e => {
     let { name, value } = e.target
 
     this.setState({
@@ -45,23 +45,60 @@ handleChange = e => {
   }
 
   render() {
-    return this.state.edit ? (
+    let {brand, model, colorway, size, retailPrice, resalePrice, edit} = this.state
+    
+    return edit ? (
       <div className="listOfShoesU">
         <div className="leftUpdate">
 
           <div className="leftUpdateTop">
-            
-            <input type="text" name="brand" value={this.state.brand} autoComplete="off" onChange={this.handleChange}/>
-            <input type="text" name="model" value={this.state.model} autoComplete="off" onChange={this.handleChange}/>
-            <input type="text" name="colorway" value={this.state.colorway} autoComplete="off" onChange={this.handleChange}/>
+
+            <input name="brand"
+              value={brand}
+              onChange={this.handleChange}
+              type="text"
+              autoComplete="off"
+            />
+            <input name="model"
+              value={model}
+              onChange={this.handleChange}
+              type="text"
+              autoComplete="off"
+            />
+            <input name="colorway"
+              value={colorway}
+              onChange={this.handleChange}
+              type="text"
+              autoComplete="off"
+            />
           </div>
 
-            <input className="sizeUpdate" type="number" name="size" value={this.state.size} min="1" step=".5" onChange={this.handleChange}/>
-            <input className="retailUpdate" type="number" name="retailPrice" value={this.state.retailPrice} min="0" step="10" onChange={this.handleChange}/>
+          <input className="sizeUpdate"
+            name="size"
+            value={size}
+            onChange={this.handleChange}
+            type="number"
+            min="1"
+            step=".5"
+          />
+          <input className="retailUpdate"
+            name="retailPrice"
+            value={retailPrice}
+            onChange={this.handleChange}
+            type="number"
+            min="0"
+            step="10"
+          />
         </div>
 
         <div className="rightUpdate">
-          <input type="number" name="resalePrice" value={this.state.resalePrice} min="0" step="10" onChange={this.handleChange}/>
+          <input name="resalePrice"
+            value={resalePrice}
+            onChange={this.handleChange}
+            type="number"
+            min="0"
+            step="10"
+          />
           <button onClick={this.handleUpdateClick}><i className="far fa-check-circle fa-3x"></i></button>
         </div>
 
@@ -74,23 +111,19 @@ handleChange = e => {
             <p>{`Retail: $${this.props.item.retailPrice}`}</p>
           </div>
           <div className="rightShoeInfo">
-              <div className="shoePrices">
-                <p><i className="fas fa-dollar-sign"></i> {this.props.item.resalePrice}</p>
-              </div>
-              <div className="shoeButtons">
-                <button onClick={this.handleEditClick}><i className="fas fa-edit fa-2x"></i></button>
-                <button onClick={this.handleDeleteClick}><i className="far fa-trash-alt fa-2x"></i></button>
-              </div>
+            <div className="shoePrices">
+              <p><i className="fas fa-dollar-sign"></i> {this.props.item.resalePrice}</p>
+            </div>
+            <div className="shoeButtons">
+              <button onClick={this.handleEditClick}><i className="fas fa-edit fa-2x"></i></button>
+              <button onClick={this.handleDeleteClick}><i className="far fa-trash-alt fa-2x"></i></button>
+            </div>
           </div>
-            
-    </div>
-    )
+
+        </div>
+      )
   }
 }
-
-
-
-
 
 
 export default FormShoes

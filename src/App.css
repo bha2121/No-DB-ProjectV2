@@ -10,6 +10,8 @@ body{
   width: 100%
 }
 
+
+
 header{
   height: 125px;
   display: flex;
@@ -20,7 +22,7 @@ header{
   background: rgb(5, 205, 219); 
   border-bottom: solid 2px rgba(236, 234, 234, 0.411);
   padding-left: 30px;
-  
+  color: white
 }
 
 header h1{
@@ -28,12 +30,13 @@ header h1{
   font-size: 55px;
   font-style: italic;
   font-weight: 900;
+  margin-right: 20px;
 }
 
 header img{
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  color: white;
 }
 
 .hamburger{
@@ -51,6 +54,8 @@ header img{
   width: 100%;
   padding-top: 50px;
   border-bottom: solid 4px rgba(236, 234, 234, 0.411);
+  border-left: solid 1px rgba(236, 234, 234, 0.411);
+  border-right: solid 1px rgba(236, 234, 234, 0.411);
 }
 
 .firstInputRow{
@@ -126,6 +131,8 @@ header img{
   height: 120px;
   border-top: solid 1px rgba(236, 234, 234, 0.411);
   border-bottom: solid 1px rgba(236, 234, 234, 0.411);
+  border-left: solid 1px rgba(236, 234, 234, 0.411);
+  border-right: solid 1px rgba(236, 234, 234, 0.411);
 
   
   justify-content: space-around;
@@ -198,7 +205,9 @@ header img{
   border-top: solid 1px rgba(236, 234, 234, 0.411);
   border-bottom: solid 1px rgba(236, 234, 234, 0.411);
   justify-content: space-around;
-  letter-spacing: 1.5px
+  letter-spacing: 1.5px;
+  border-left: solid 1px rgba(236, 234, 234, 0.411);
+  border-right: solid 1px rgba(236, 234, 234, 0.411);
 }
 
 .leftShoeInfo{
@@ -222,7 +231,7 @@ header img{
 }
 
 .rightShoeInfo .shoePrices{
-  width: 95px;
+  width: 105px;
   font-size: 25px;
   font-weight: 900;
 }
@@ -242,6 +251,14 @@ header img{
   outline-color: rgb(4, 230, 247);
   cursor: pointer;
   
+}
+
+.fa-edit:hover{
+  color: rgb(139, 241, 249);
+}
+
+.fa-trash-alt:hover{
+  color: rgb(247, 141, 122)
 }
 
 .shoeButtons :nth-child(2){
@@ -289,6 +306,8 @@ input:focus{
   border-bottom: solid 4px rgba(236, 234, 234, 0.411);
   color: rgb(4, 230, 247);
   border-top: solid 4px rgba(236, 234, 234, 0.411);
+  border-left: solid 1px rgba(236, 234, 234, 0.411);
+  border-right: solid 1px rgba(236, 234, 234, 0.411);
 
 }
 
@@ -328,9 +347,11 @@ input:focus{
   height: 200px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
   letter-spacing: 2.2px;
-  font-weight: 700
+  font-weight: 700;
+  border-left: solid 1px rgba(236, 234, 234, 0.411);
+  border-right: solid 1px rgba(236, 234, 234, 0.411);
 }
 
 .gainLossPositive :nth-child(1){
@@ -370,6 +391,8 @@ input:focus{
   justify-content: center;
   letter-spacing: 2.2px;
   font-weight: 700;
+  border-left: solid 1px rgba(236, 234, 234, 0.411);
+  border-right: solid 1px rgba(236, 234, 234, 0.411);
 }
 
 .gainLossNegative :nth-child(1){
@@ -401,6 +424,15 @@ input:focus{
 .profitN p{
   font-size: 30px;
   font-weight: 900;
+}
+
+footer{
+  height: 50px;
+  border-bottom: solid 4px rgba(236, 234, 234, 0.411);
+  color: rgb(4, 230, 247);
+  border-top: solid 2px rgba(236, 234, 234, 0.411);
+  border-left: solid 1px rgba(236, 234, 234, 0.411);
+  border-right: solid 1px rgba(236, 234, 234, 0.411);
 }
 
 
